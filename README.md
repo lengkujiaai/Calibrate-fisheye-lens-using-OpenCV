@@ -8,7 +8,9 @@
 将鱼眼图片改成正常看到的图片分两步：
 
 # 1、通过文件calibrate.py（需要修改CHECKERBOARD = (5,7)，因为是6X8，所以改成（5，7））和多张黑白棋盘图片（20张也差不多）获取相机内参值
-使用方法：把calibrate.py和xx.jpg图片放在一个文件夹下面，输入python calibrate.py后稍等一分钟即可得到结果，具体见截图my_result：
+使用方法：把calibrate.py和xx.jpg图片放在一个文件夹下面，输入python calibrate.py后稍等一分钟即可得到结果，具体见截图：
+![image](https://github.com/lengkujiaai/Calibrate-fisheye-lens-using-OpenCV/blob/main/img_readme/get_parameters.png)
+
 DIM是图片长宽的分辨率
 
 DIM=(1280, 720)
