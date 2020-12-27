@@ -17,14 +17,14 @@
 
 # 矫正图片主要分为两大步：
 
-第一、帮助OpenCV发现镜头的2个内参。OpenCV中称作K和D。你只需要知道K和D是numpy数组，不需要关心他们的真正含义
+第一步、帮助OpenCV发现镜头的2个内参。OpenCV中称作K和D。你只需要知道K和D是numpy数组，不需要关心他们的真正含义
 
-第二、通过使用K和D矫正图片
-
-
+第二步、通过使用K和D矫正图片
 
 
-第一步：
+
+
+第一步：计算K和D
 
 ## 1、下载棋盘图片
 
@@ -60,11 +60,25 @@ D=np.array([[152.50098302679038], [-150.36440309694163], [83.13957034501341], [-
 
 DIM是图片长宽的分辨率
 
-# 正常图片
+# 第二步：正常图片
 
-# 2、通过undistorted.py和内参值DIM、K、D将图片矫正
-我的结果：很不理想啊，中间部分正常，边上不行
+有了K和D之后，如果满足以下条件，就可以得到矫正过的图片
 
-结果看图片：纠正前是0.jpg纠正后的是1.jpg
+1、需要矫正的图片与获取K和D值的图片维度一样
+
+2、确保待矫正的图片边缘干净整洁
+
+如果是这样，你会更快乐。
+
+否则，你需要参考第二部分的手册：https://medium.com/@kennethjiang/calibrate-fisheye-lens-using-opencv-part-2-13990f1b157f
+等有时间再翻译运行这部分内容 ~ ~ ~
+
+通过python undistort.py my_image.jpg矫正图片
+
+矫正前：
+
+矫正后：
+
+
 
 英文参考连接：https://medium.com/@kennethjiang/calibrate-fisheye-lens-using-opencv-333b05afa0b0
