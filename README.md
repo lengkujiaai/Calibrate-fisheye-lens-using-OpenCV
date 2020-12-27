@@ -6,7 +6,7 @@
 注意：python2.7下运行成功，3.5下失败
 
 当你使用鱼眼镜头（大于160度的视野），OpenCV中经典的矫正镜头的方法可能失效。即便你小心的按照OpenCV文档中的步骤执行，你也可能得到没有矫正的图片，如下图：
-
+![image](https://github.com/lengkujiaai/Calibrate-fisheye-lens-using-OpenCV/blob/main/img_readme/1.png)
 
 将鱼眼图片改成正常看到的图片分两步：
 
